@@ -3,7 +3,7 @@ MAINTAINER Li YaLei <caidaoli@gmail.com>
 # 备份原源列表
 # RUN mv /etc/apt/sources.list /etc/apt/sources.list.backup
 # 替换阿里云源
-ADD ./sources.list /etc/apt/sources.list
+#ADD ./sources.list /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y cmake zlib1g-dev  git-core  libssl-dev zsh libjsoncpp-dev libevent-dev vim wget curl  unixodbc-dev
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
