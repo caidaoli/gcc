@@ -5,7 +5,7 @@ MAINTAINER Li YaLei <caidaoli@gmail.com>
 # 替换阿里云源
 #ADD ./sources.list /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install -y cmake zlib1g-dev  git-core  libssl-dev zsh libjsoncpp-dev libevent-dev vim wget curl  unixodbc-dev
+RUN apt-get install -y cmake zlib1g-dev  git-core  libssl-dev zsh libjsoncpp-dev libevent-dev vim wget curl  unixodbc-dev uuid-dev
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 #RUN wget https://github.com/msgpack/msgpack-c/releases/download/cpp-2.0.0/msgpack-2.0.0.tar.gz && mkdir /msgpack && tar xzf msgpack-2.0.0.tar.gz -C /msgpack && cd /msgpack/msgpack-2.0.0 && cmake -DMSGPACK_CXX11=ON . && make install
 ADD https://github.com/msgpack/msgpack-c/releases/download/cpp-2.0.0/msgpack-2.0.0.tar.gz /tmp
